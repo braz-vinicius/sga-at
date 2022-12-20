@@ -41,16 +41,7 @@ namespace SGA.Atividade.Services
 
         public void UpdateAtividadesByDisciplinaNome(int disciplinaId, string newDisciplinaNome)
         {
-           // var atividades = repository.FindWhere(x => x.DisciplinaId == disciplinaId);
-
             dbContext.Database.ExecuteSql($"UPDATE [Atividades] SET DisciplinaNome = {newDisciplinaNome} WHERE DisciplinaId = {disciplinaId}");
-            //dbContext.SaveChanges();
-            //foreach (var item in atividades)
-            //{
-            //    item.DisciplinaNome = newDisciplinaNome;
-            //    repository.Update(item);
-            //}
-
         }
     }
 }
